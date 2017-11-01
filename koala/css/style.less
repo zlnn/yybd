@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    font-size: 62.5%;
+}
+.box(@dir:vertical) {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -o-box;
+    display: box;
+    -webkit-box-orient: @dir;
+    -moz-box-orient: @dir;
+    -o-box-orient: @dir;
+    overflow: hidden;
+}
+html,
+body,
+.container {
+    width: 100%;
+    height: 100%;
+    .box();
+}
+header {
+    width: 100%;
+    background: #900;
+    position: relative;
+    padding: 2rem 0;
+    h2 {
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+    }
+    .return {
+        position: absolute;
+        top: 1.5rem;
+        left: 1rem;
+        background: url("../img/fan.png") no-repeat;
+        background-size: cover;
+        width: 3rem;
+        height: 3rem;
+        display: none;
+    }
+    .fav {
+        display: none;
+    }
+    .search {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+}
+.main {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: pink;
+    position: relative;
+    -webkit-box-flex: 1;
+}
+.main>div {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    transform: translateX(100%);
+}
+.main>div:nth-child(1) {
+    transform: translateX(0);
+}
+.home {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    a {
+        display: block;
+        padding: 0.5rem 0;
+        img {
+            width: 290px;
+            height: auto;
+        }
+    }
+}
+footer {
+    background: #000;
+    position: relative;
+    nav {
+        .box(horizontal);
+        padding: 0.5rem 0;
+        a {
+            position: relative;
+            z-index: 2;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: white;
+            .box();
+            -webkit-box-flex: 1;
+            -webkit-box-align: center;
+            -webkit-box-pack: center;
+        }
+    }
+}
+.mark {
+    width: 25%;
+    height: 100%;
+    box-shadow: 0 3px 8px #FFFFFF;
+    background: #000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.list-iscroll>div {
+    border-bottom: 1px solid darkgray;
+}
+.list-iscroll>div span {
+    vertical-align: middle;
+    margin-left: 2rem;
+}
+.list-iscroll>div a img {
+    vertical-align: middle;
+}
+.list-iscroll div a {
+    text-decoration: none;
+    color: darkolivegreen;
+}
+#content {
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
